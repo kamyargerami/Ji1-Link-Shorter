@@ -11,8 +11,8 @@ try{
   `id` int(11) NOT NULL,
   `long` varchar(700) NOT NULL,
   `short` varchar(50) NOT NULL,
-  `userCreated` varchar(11) NOT NULL DEFAULT 'guest',
-  `click` bigint(20) NOT NULL DEFAULT '0'
+  `expire` DATE NOT NULL DEFAULT '2050/01/01',
+  `click` INT NOT NULL DEFAULT '0'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 

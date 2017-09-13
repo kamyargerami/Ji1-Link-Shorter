@@ -18,6 +18,8 @@ number you want.
 then you must edit $randomCharNumber var in /panel/config.php
  with number you want.
  
+ if you want to chage the 404 error page you must htaccess file
+ 
  for more please contact me : kamrosoft@yahoo.com
  
  web: http://kamrosoft.ir
