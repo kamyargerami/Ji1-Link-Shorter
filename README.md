@@ -10,6 +10,8 @@ for install you need edit /panel/config.php and edit your url file and database 
 
 secend you must go to /panel/install.php/ for example "http://yoursite.com/panel/install"
 
+please remove panel/instal.php file after import database
+
 shortner.php file is shorting links and writing data to database
 
 this program make 4 random char for short links , if you want to edit that you must edit 
