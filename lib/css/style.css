@@ -1,0 +1,117 @@
+@font-face {
+  font-family: "IRANSans";
+  font-style: normal;
+  font-weight: 500;
+  src: url("../font/IRANSansWeb.eot") format("eot"), url("../font/IRANSansWeb.ttf") format("truetype"), url("../font/IRANSansWeb.woff2") format("woff2"), url("../font/IRANSansWeb.woff") format("woff"); }
+body {
+  direction: rtl;
+  font-family: IRANSans; }
+
+.transparentBG {
+  background-color: transparent; }
+
+.bold {
+  font-weight: 900; }
+
+.no-margin-btn {
+  margin-bottom: 0 !important; }
+
+.margin20Botton {
+  margin-bottom: 20px; }
+
+.justify-text {
+  text-align: justify; }
+
+nav div.nav-wrapper a.brand-logo img.logoImage {
+  max-height: 50px;
+  margin-right: 1rem;
+  vertical-align: middle; }
+nav div.nav-wrapper ul.right {
+  margin-right: 3rem; }
+  nav div.nav-wrapper ul.right li {
+    float: right;
+    font-weight: 800; }
+
+header #getInputMainFirstPageDiv {
+  position: absolute;
+  top: 17rem;
+  left: 0rem;
+  right: 0rem;
+  z-index: 2;
+  padding: 10px 0 15px 0; }
+  header #getInputMainFirstPageDiv form div.row {
+    background-color: rgba(0, 0, 0, 0.16); }
+    header #getInputMainFirstPageDiv form div.row div button {
+      width: 100%; }
+      header #getInputMainFirstPageDiv form div.row div button i {
+        position: relative; }
+    header #getInputMainFirstPageDiv form div.row div .mainLable, header #getInputMainFirstPageDiv form div.row div input {
+      color: #202020;
+      text-align: left; }
+    header #getInputMainFirstPageDiv form div.row div input {
+      direction: ltr; }
+header .slider .indicators {
+  z-index: 2;
+  bottom: 40px; }
+  header .slider .indicators .indicator-item.active {
+    background-color: #b71c1c;
+    display: none; }
+
+article {
+  height: 100%;
+  width: 100%;
+  background-image: url("../../file/image/article_background.png");
+  background-repeat: repeat;
+  background-attachment: fixed;
+  background-position: center top;
+  min-height: 25rem; }
+  article div.container div.row ul.collapsible {
+    padding: 0; }
+    article div.container div.row ul.collapsible li .collapsible-body {
+      background-color: #fff; }
+  article div.container div.row #LoginMainDiv {
+    background-color: #fff;
+    box-shadow: 0px 0px 20px #969696;
+    margin-top: 20px;
+    padding: 20px; }
+    article div.container div.row #LoginMainDiv div form div.input-field input {
+      text-align: right;
+      direction: rtl; }
+    article div.container div.row #LoginMainDiv div form div.input-field label {
+      left: auto; }
+    article div.container div.row #LoginMainDiv div form button {
+      width: 100%;
+      margin-top: 20px; }
+  article div.row div div #alertsOnPanel {
+    height: 30vh; }
+  article div.row div div #linksOnPanel {
+    height: 30vh; }
+  article div.row div #mainChartOnPanel {
+    width: 100%;
+    height: 50vh; }
+  article div.row div .panelDivTitles {
+    padding: 10px;
+    margin-top: 10px; }
+  article div.row #panelAside {
+    min-height: 100vh;
+    padding-top: 20px;
+    background-color: #9a0505 !important; }
+    article div.row #panelAside #panelImage {
+      max-width: 130px;
+      max-height: 130px; }
+    article div.row #panelAside .panelItems {
+      margin: 20px 0 20px 0;
+      padding: 20px;
+      box-shadow: 0px 0px 40px #5f0404; }
+
+footer {
+  height: 100%;
+  width: 100%;
+  background-image: url("../../file/image/article_background2.png");
+  background-repeat: repeat-x;
+  background-position: center top; }
+
+.text-about {
+  line-height: 1.5; }
+
+/*# sourceMappingURL=style.css.map */

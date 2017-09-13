@@ -1,0 +1,44 @@
+header{
+  #getInputMainFirstPageDiv{
+    position: absolute;
+    top: 17rem;
+    left: 0rem;
+    right: 0rem;
+    z-index: 2;
+    padding: 10px 0 15px 0;
+    form{
+      div.row{
+        background-color: rgba(0, 0, 0, 0.16);
+        div{
+          button{
+            width: 100%;
+            i{
+              position: relative;
+            }
+          }
+          .mainLable{
+            color: #202020;
+            text-align: left;
+          }
+          input{
+            @extend .mainLable;
+            direction: ltr;
+          }
+        }
+      }
+    }
+  }
+  .slider{
+    .indicators {
+      z-index: 2;
+      bottom: 40px;
+      .indicator-item.active{
+        background-color: #b71c1c;
+        display: none;
+      }
+    }
+  }
+
+}
+
+

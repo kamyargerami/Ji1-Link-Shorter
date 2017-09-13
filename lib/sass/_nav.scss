@@ -1,0 +1,19 @@
+$navTextColor: #1976d2;
+nav{
+  div.nav-wrapper{
+    a.brand-logo{
+      img.logoImage{
+        max-height: 50px;
+        margin-right: 1rem;
+        vertical-align: middle;
+      }
+    }
+    ul.right{
+      margin-right: 3rem;
+      li{
+        float: right;
+        font-weight: 800;
+      }
+    }
+  }
+}

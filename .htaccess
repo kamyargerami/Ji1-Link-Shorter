@@ -1,0 +1,2 @@
+RewriteEngine on
+RewriteRule ^([\w\d]{4})$ redirect.php?getShortLinkFromShorted=$1 [L]

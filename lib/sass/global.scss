@@ -1,0 +1,30 @@
+@font-face {
+  font-family: "IRANSans";
+  font-style: normal;
+  font-weight: 500;
+  src: url("../font/IRANSansWeb.eot") format("eot"),
+  url("../font/IRANSansWeb.ttf") format("truetype"),
+  url("../font/IRANSansWeb.woff2") format("woff2"),
+  url("../font/IRANSansWeb.woff") format("woff");
+}
+body{
+  direction: rtl;
+  font-family: IRANSans;
+}
+.transparentBG {
+  background-color: rgba(0,0,0,0);
+}
+.bold{
+  font-weight: 900;
+}
+.no-margin-btn{
+  margin-bottom: 0!important;
+}
+
+.margin20Botton{
+  margin-bottom: 20px;
+}
+
+.justify-text{
+  text-align: justify;
+}
