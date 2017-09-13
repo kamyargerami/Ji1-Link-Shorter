@@ -29,6 +29,7 @@ ALTER TABLE `links`
     $sqlInstallQuery->execute();
 
     echo "database successfully imported!";
+    echo "please delete this file!";
 
 }catch(PDOException $e){
 //error text info
