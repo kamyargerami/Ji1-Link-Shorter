@@ -42,7 +42,8 @@ header #getInputMainFirstPageDiv {
   header #getInputMainFirstPageDiv form div.row {
     background-color: rgba(0, 0, 0, 0.16); }
     header #getInputMainFirstPageDiv form div.row div button {
-      width: 100%; }
+      width: 100%;
+      padding: 0 0 !important; }
       header #getInputMainFirstPageDiv form div.row div button i {
         position: relative; }
     header #getInputMainFirstPageDiv form div.row div .mainLable, header #getInputMainFirstPageDiv form div.row div input {

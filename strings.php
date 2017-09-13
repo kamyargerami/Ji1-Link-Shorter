@@ -81,7 +81,7 @@ function getFooterDiv(){
                     <li><a class="grey-text text-lighten-3" href="#!">لینکست</a></li>
                 </ul>
             </div>
-            <div class="col l9 xl9 m9 s9">
+            <div class="col l9 xl9 m9 s12">
                 <h5 class="white-text center-align bold">درباره جی وان</h5>
                 <h6 class="justify-text text-about">جی وان یک پروژه کوچیک و اوپن سورسه که برای رفع مشکل سایت های شخصیم نوشته شده که لینک مطالبی که به
                 اشتراک گزاشته میشه کوتاه بشه در صورتی که سئو سایت اصلی خراب نشه. کوتاه کننده های لینک زیادن ولی فرقشون اینه که ارزش سئو رو برای خودشون
