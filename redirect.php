@@ -17,7 +17,6 @@ $flagFind = false;
         while ($dataBaseColLineData = $getDataFromDatabase->fetch()){ //get col by col database
             $flagFind = true;
             $click = $dataBaseColLineData['click'] + 1;  //var that show current row click number
-
             $currentColid = $dataBaseColLineData['id']; //var that show current row id
 
             $sqlWriteClickQuery = $databaseConnection->prepare(
@@ -26,7 +25,7 @@ $flagFind = false;
             $sqlWriteClickQuery->bindParam(':click', $click);
             $sqlWriteClickQuery->bindParam(':id', $currentColid);
             $sqlWriteClickQuery->execute(); //click successfully write
-            
+
             Header( "HTTP/1.1 301 Moved Permanently" );
             Header( "Location: " . $dataBaseColLineData['long']);
 
