@@ -24,8 +24,8 @@ if(isValidUrl($getLongLink)){
 
             //ready query for execute
             $sqlWriteLinkQuery = $databaseConnection->prepare(
-                "INSERT INTO `links` (`id`, `long`, `short`, `userCreated`, `click`)
-                                VALUES (NULL, :longLink, :shortLink, DEFAULT , DEFAULT);");
+                "INSERT INTO `links` (`id`, `long`, `short`)
+                                VALUES (NULL, :longLink, :shortLink);");
 
 
 
