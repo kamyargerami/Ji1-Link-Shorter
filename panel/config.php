@@ -1,5 +1,5 @@
 <?php
-$siteUrl = "http://pc/linkshortner/";  //put your current path url
+$siteUrl = "http://pc/ji1-shortener/";  //put your current path url
 $randomCharNumber = 4;
 function getUrl(){
     global $siteUrl;

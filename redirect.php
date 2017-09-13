@@ -25,27 +25,11 @@ $flagFind = false;
 
             $sqlWriteClickQuery->bindParam(':click', $click);
             $sqlWriteClickQuery->bindParam(':id', $currentColid);
-
             $sqlWriteClickQuery->execute(); //click successfully write
-
-
-            if($dataBaseColLineData['expire'] ==  date("Y-m-d") ){
-                if($click <= 50){ //if click < 20 delete row
-                    $sqlDeleteCol = $databaseConnection->prepare("DELETE FROM `links` WHERE `links`.`id` = :id");
-                    $sqlDeleteCol->bindParam(':id', $currentColid);
-                    $sqlDeleteCol->execute();
-                    echo "اعتبار این لینک دیگر معتبر نیست و بیش از ۱۰۰ روز از تولید آن میگذرد همچنین به مقدار کافی بازدید نداشته است";
-                }else{ //add 20 day to expire day if click > 20
-                    $expireDate = date('Y-m-d', strtotime("+20 days"));
-                    $sqlPlusExpireDate = $databaseConnection->prepare(
-                        "UPDATE `links` SET `expire` = :expire WHERE `links`.`id` = :id;");
-                    $sqlPlusExpireDate->bindParam(':id', $currentColid);
-                    $sqlPlusExpireDate->bindParam(':expire', $expireDate);
-                }
-            }else{
+            
             Header( "HTTP/1.1 301 Moved Permanently" );
             Header( "Location: " . $dataBaseColLineData['long']);
-            }
+
         }
         if(!$flagFind){
             echo "لینک نا معتبر است ، پس از گذشت ۳ ثانیه به صفحه اصلی منتقل می شوید";
