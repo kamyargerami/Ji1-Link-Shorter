@@ -18,7 +18,7 @@ if(isValidUrl($getLongLink)){
             //execute write to database
             $getDataFromDatabase = $databaseConnection->query($sqlReadLinkQuery);
             $getDataFromDatabase -> setFetchMode(PDO::FETCH_ASSOC);
-            while ($dataBaseColLineData = $getDataFromDatabase->fetch()){
+            while ($dataBaseColLineData == $getDataFromDatabase->fetch()){
                 $flagWrite = false;
             }
         }while(!$flagWrite);
