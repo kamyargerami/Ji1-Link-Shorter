@@ -11,19 +11,7 @@ if(isValidUrl($getLongLink)){
         $databaseConnection = new PDO("mysql:host=$mysqlHost;dbname=$databaseName",$databaseUser,$databasePassword);
         $databaseConnection->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-        do{
-            $shortLink = random_string($randomCharNumber); //bulid short link whith site address and random number
-            //ready query for execute
-            $sqlReadLinkQuery = "select * from links where short='$shortLink'";
-            //execute write to database
-            $getDataFromDatabase = $databaseConnection->query($sqlReadLinkQuery);
-            $getDataFromDatabase -> setFetchMode(PDO::FETCH_ASSOC);
-            while ($dataBaseColLineData == $getDataFromDatabase->fetch()){
-                $flagWrite = false;
-            }
-        }while(!$flagWrite);
-
-
+        $shortLink = random_string($randomCharNumber);
         $expireDate = date('Y-m-d', strtotime("+100 days"));
             //ready query for execute
             $sqlWriteLinkQuery = $databaseConnection->prepare(
