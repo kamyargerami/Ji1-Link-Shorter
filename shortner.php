@@ -1,19 +1,18 @@
 <?php
-include_once ('functions.php');
-include_once ('panel/config.php');
+include_once('functions.php');
+include_once('panel/config.php');
 $getLongLink = htmlspecialchars($_POST['linkLong']);
 $flagWrite = true;
 $today = date("Y-m-d");
 $upperExpire = date('Y-m-d', strtotime("+20 days"));
-if(isValidUrl($getLongLink)){
-    try{
-        //connect to database
-        $databaseConnection = new PDO("mysql:host=$mysqlHost;dbname=$databaseName",$databaseUser,$databasePassword);
+if (isValidUrl($getLongLink)) {
+    try {
+        $databaseConnection = new PDO("mysql:host=$mysqlHost;dbname=$databaseName", $databaseUser, $databasePassword);
         $databaseConnection->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-        $shortLink = random_string($randomCharNumber);
-        $expireDate = date('Y-m-d', strtotime("+100 days"));
-            //ready query for execute
+        $shortLink = isAllready_exist_link($getLongLink);
+        if (!$shortLink) {
+            $shortLink = random_string($randomCharNumber);
             $sqlWriteLinkQuery = $databaseConnection->prepare(
                 "INSERT INTO `links` (`id`, `long`, `short`, `expire`)
                                 VALUES (NULL, :longLink, :shortLink, :expireDate);");
@@ -24,10 +23,12 @@ if(isValidUrl($getLongLink)){
             $sqlWriteLinkQuery->bindParam(':expireDate', $expireDate);
             //execute write to database
             $sqlWriteLinkQuery->execute();
-
-            echo getUrl() . $shortLink;
+        }
+        echo getUrl() . $shortLink;
 
         //delete items expire
+        $expireDate = date('Y-m-d', strtotime("+100 days"));
+
         $sqlDeleteCol = $databaseConnection->prepare("DELETE FROM `links`
                       WHERE `links`.`expire` = :expire AND `links`.`click` < 50");
         $sqlDeleteCol->bindParam(':expire', $today);
@@ -39,14 +40,10 @@ if(isValidUrl($getLongLink)){
         $sqlChangeExpire->bindParam(':expire', $today);
         $sqlChangeExpire->bindParam(':newExpire', $upperExpire);
         $sqlChangeExpire->execute();
-
-
-
-    }catch(PDOException $e){
-//error text info
+    } catch (PDOException $e) {
         echo "Error: " . $e->getMessage();
     }
-}else{
+} else {
     echo "Invalid URL";
 }
 
