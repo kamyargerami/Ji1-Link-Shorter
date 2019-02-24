@@ -20,7 +20,7 @@ if (isValidUrl($getLongLink)) {
             //connect binds to variable
             $sqlWriteLinkQuery->bindParam(':longLink', $getLongLink);
             $sqlWriteLinkQuery->bindParam(':shortLink', $shortLink);
-            $sqlWriteLinkQuery->bindParam(':expireDate', $expireDate);
+            $sqlWriteLinkQuery->bindParam(':expireDate', $upperExpire);
             //execute write to database
             $sqlWriteLinkQuery->execute();
         }
