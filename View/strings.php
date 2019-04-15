@@ -1,21 +1,26 @@
 <?php
-function getPageTitle($pageUrl = 1){
+function getPageTitle($pageUrl = 1)
+{
     echo "کوتاه کننده لینک جی وان";
 }
 
-function getPageMetaDescription($pageDesc = 1){
+function getPageMetaDescription($pageDesc = 1)
+{
     echo "به اسانی لینک های خود را کوتاه کنید و کسب درامد کنید";
 }
 
-function getKeyWords($pageKeyWord = 1){
+function getKeyWords($pageKeyWord = 1)
+{
     echo "link,short";
 }
+
 //end global functions
 
 
 //article functions
-function getCollapsibleMenuTitle($numberItem){ //this show main collapsible manu TITLE in home page
-    switch ($numberItem){
+function getCollapsibleMenuTitle($numberItem)
+{ //this show main collapsible manu TITLE in home page
+    switch ($numberItem) {
         case 1:
             echo "فواید لینک کوتاه";
             break;
@@ -30,8 +35,10 @@ function getCollapsibleMenuTitle($numberItem){ //this show main collapsible manu
             break;
     }
 }
-function getCollapsibleMenuText($numberItem){ //this show main collapsible manu DESCRIPTION in home page
-    switch ($numberItem){
+
+function getCollapsibleMenuText($numberItem)
+{ //this show main collapsible manu DESCRIPTION in home page
+    switch ($numberItem) {
         case 1:
             echo '
             <p>لینک کوتاه به طور مستقیم باعث افزایش کاربران ورودی می شود.</p>
@@ -62,48 +69,38 @@ function getCollapsibleMenuText($numberItem){ //this show main collapsible manu 
 }
 
 //panel functions
-function getUserNameInPanel(){
+function getUserNameInPanel()
+{
     return "لورم ایپسوم";
 }
 
 //end article functions
 
-function getFooterDiv(){
+function getFooterDiv()
+{
     echo '
     <div class="container">
-        <div class="row">
-            <div class="col l3 xl3 m3 hide-on-small-only">
-                <ul>
-                    <h5 class="white-text bold">حامیان ما</h5>
-                    <li><a class="grey-text text-lighten-3" href="#!">فروشگاه اینترنتی دونامال</a></li>
-                    <li><a class="grey-text text-lighten-3" href="#!">شرکت تک دیتا</a></li>
-                    <li><a class="grey-text text-lighten-3" href="#!">کامروسافت</a></li>
-                    <li><a class="grey-text text-lighten-3" href="#!">لینکست</a></li>
-                </ul>
-            </div>
-            <div class="col l9 xl9 m9 s12">
-                <h5 class="white-text center-align bold">درباره جی وان</h5>
+        <h5 class="white-text center-align bold">درباره جی وان</h5>
                 <h6 class="justify-text text-about">جی وان یک پروژه کوچیک و اوپن سورسه که برای رفع مشکل سایت های شخصیم نوشته شده که لینک مطالبی که به
                 اشتراک گزاشته میشه کوتاه بشه در صورتی که سئو سایت اصلی خراب نشه. کوتاه کننده های لینک زیادن ولی فرقشون اینه که ارزش سئو رو برای خودشون
          ثبت میکنن. 
-                </h6>     
-            </div>
-         </div>
+                </h6>
     </div>
     ';
 }
 
-function getFooterCopyWriteText(){
+function getFooterCopyWriteText()
+{
     echo '
     <div class="footer-copyright">
         <div class="container">
-            <a class="grey-text text-lighten-4 right" href="http://kamrosoft.ir">طراحی و اجرا کامروسافت</a>
+            <a class="grey-text text-lighten-4 right" href="https://kamyargerami.ir">طراحی و اجرا کامیار گرامی</a>
             <div class="left">
                 <a href="https://www.facebook.com/kamyar.geramiasl" class="waves-effect waves-light white-text"><i class="fa fa-facebook small"></i></a>
                 <a href="https://www.linkedin.com/in/kamyar-gerami-33997b108/" class="waves-effect waves-light white-text"><i class="fa fa-linkedin small"></i></a>
                 <a href="https://twitter.com/kamyar_gerami" class="waves-effect waves-light white-text"><i class="fa fa-twitter small"></i></a>
                 <a href="https://www.instagram.com/kam2yar/" class="waves-effect waves-light white-text"><i class="fa fa-instagram small"></i></a>
-                <a href="https://github.com/kamrosoft/ji1-shortener" class="waves-effect waves-light white-text"><i class="fa fa-github small"></i></a>
+                <a href="https://github.com/kam2yar/ji1-shortener" class="waves-effect waves-light white-text"><i class="fa fa-github small"></i></a>
             </div>
         </div>
     </div>
