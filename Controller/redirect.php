@@ -1,6 +1,7 @@
 <?php
-include_once ('functions.php');
-include_once ('panel/config.php');
+include_once('functions.php');
+include_once('config.php');
+
 $requestShortLink = htmlspecialchars($_GET['getShortLinkFromShorted']);
 $flagFind = false;
     try{

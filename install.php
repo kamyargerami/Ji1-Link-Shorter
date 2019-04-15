@@ -1,5 +1,5 @@
 <?php
-require_once ('config.php');
+require_once('config.php');
 try{
     //connect to database
     $databaseConnection = new PDO("mysql:host=$mysqlHost;dbname=$databaseName",$databaseUser,$databasePassword);

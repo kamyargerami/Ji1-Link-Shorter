@@ -1,6 +1,7 @@
 <?php
 include_once('functions.php');
-include_once('panel/config.php');
+include_once('config.php');
+
 $getLongLink = htmlspecialchars($_POST['linkLong']);
 $flagWrite = true;
 $today = date("Y-m-d");

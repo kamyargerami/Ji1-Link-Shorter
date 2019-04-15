@@ -1,7 +1,7 @@
 <?php
-require_once('functions.php');
-include_once ('head.php');
-include_once ('nav.php');
-include_once ('header.php');
-include_once ('article.php');
-include_once ('footer.php');
+require_once('Controller/functions.php');
+include_once('View/head.php');
+include_once('View/nav.php');
+include_once('View/header.php');
+include_once('View/article.php');
+include_once('View/footer.php');

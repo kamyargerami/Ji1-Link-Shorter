@@ -1,6 +1,6 @@
 <?php
-require_once('strings.php');
-require_once ('panel/config.php');
+require_once('View/strings.php');
+require_once('config.php');
 
 function isValidUrl($url){  //function to verify url with boolian return
     if(filter_var($url, FILTER_VALIDATE_URL)){
