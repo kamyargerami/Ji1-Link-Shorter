@@ -39,6 +39,7 @@ you need edit Config file that stored in Controller\Config and then you must cha
 details.
 
 ```PHP
+    public static $siteUrl = "http://ji1.test/";  //put your current path url
     public static $mysqlHost = "localhost"; //put your server host here
     public static $databaseName = "ji1"; //put your database name that you crated
     public static $databaseUser = "root"; //put your database username that you created
