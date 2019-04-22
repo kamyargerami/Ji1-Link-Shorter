@@ -1,7 +1,15 @@
 <?php
-require_once('Controller/functions.php');
-include_once('View/head.php');
-include_once('View/nav.php');
-include_once('View/header.php');
-include_once('View/article.php');
-include_once('View/footer.php');
+ini_set('display_errors',1); error_reporting(E_ALL);
+
+require_once ('vendor/autoload.php');
+
+use \NoahBuscher\Macaw\Macaw;
+
+Macaw::get('/', 'Controller\HomeController@homepage');
+Macaw::post('/shorter', 'Controller\LinkController@shortener');
+Macaw::get('/redirect', 'Controller\LinkController@redirect');
+Macaw::get('/(:any)', function ($shortLink){
+    header("Location: /redirect?shortLink=" . $shortLink);
+});
+
+Macaw::dispatch();

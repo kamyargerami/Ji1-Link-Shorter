@@ -11,7 +11,7 @@ $(document).ready(function(){
 function showResaultFromShortnerFile() {
     $.ajax({
         type: 'POST',
-        url: 'shortner.php',
+        url: 'shorter',
         data: $('#shortnerForm').serialize(),
         success: function (response) {
             if(response == "Invalid URL"){

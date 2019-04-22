@@ -2,7 +2,7 @@
     <div class="slider">
         <ul class="slides">
             <li>
-                <img src="../Assets/image/slider_header_1.jpg">
+                <img src="../../Assets/image/slider_header_1.jpg">
                 <div class="caption center-align hide-on-small-and-down">
                     <h3 class="black-text bold">کوتاه کننده لینک جی وان</h3>
                 </div>
@@ -10,7 +10,7 @@
         </ul>
     </div>
     <div class="row" id="getInputMainFirstPageDiv">
-        <form action="../Controller/shortner.php" method="post" id="shortnerForm">
+        <form action="../../Controller/shortner.php" method="post" id="shortnerForm">
             <div class="row col l8 offset-l2 m10 offset-m1 xl6 offset-xl3 s12">
                 <div class="input-field col s7 l7 m7 xl7">
                     <input name="linkLong" type="text" class="validate" id="mainInputGetLongLink">

@@ -8,7 +8,7 @@ body {
   font-family: IRANSans; }
 
 .transparentBG {
-  background-color: transparent; }
+  background-color: rgba(0, 0, 0, 0); }
 
 .bold {
   font-weight: 900; }
@@ -61,7 +61,7 @@ header .slider .indicators {
 article {
   height: 100%;
   width: 100%;
-  background-image: url("../../Assets/image/article_background.png");
+  background-image: url("../../image/article_background.png");
   background-repeat: repeat;
   background-attachment: fixed;
   background-position: center top;
@@ -108,7 +108,7 @@ article {
 footer {
   height: 100%;
   width: 100%;
-  background-image: url("../../Assets/image/article_background2.png");
+  background-image: url("../../image/article_background2.png");
   background-repeat: repeat-x;
   background-position: center top; }
 

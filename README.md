@@ -1,27 +1,47 @@
-ji1 linkshortner is a simple link shortner with php
+##Ji1 Link Shorter Script in php
+Demo: https://ji1.ir
 
-ji1 use ridirect 301 . its so good for seo .
+ji1 is a simple object oriented script written in php that allows you to make shorter link 
+without losing your seo. with 301 redirect.
 
-Demo: http://ji1.ir
+###Install
+you can deploy script in your server.
+this package uses Macaw package for routes.
 
-i use persian on this app but if you wana to use in other language you can edit strings.php
+first you need clone the project in your server and you must install required composer package by this command:
+```PHP
+    Composer install
+```
+###Configure web server
+####Apache
+if you use apache you don't need to do anything because apache's configuration
+has stored in .htaccess file.
+####Nginx
+if you use nginx you need to put this lines in your website configuration to redirects all routes into index.php file
 
-for install you need edit /panel/config.php and edit your url file and database connection 
+```PHP
+    autoindex off;
+    
+    location / {
+        try_files $uri $uri/ /index.php?/$uri;
+    }
+            
+    rewrite ^/(.*)/$ /$1 redirect;
 
-secend you must go to /panel/install.php/ for example "http://yoursite.com/panel/install"
+    if (!-e $request_filename){
+        rewrite ^(.*)$ /index.php break;
+    }
 
-please remove panel/instal.php file after import database
+```
 
-shortner.php file is shorting links and writing data to database
+###Finish Installation
+you need edit Config file that stored in Controller\Config and then you must change the variables to your database
+details.
 
-this program make 4 random char for short links , if you want to edit that you must edit 
-.htaccess file and change second line and replace 4 with 
-number you want.
-then you must edit $randomCharNumber var in /panel/config.php
- with number you want.
- 
- if you want to chage the 404 error page you must htaccess file
- 
- for more please contact me : kamrosoft@yahoo.com
- 
- web: http://kamrosoft.ir
+```PHP
+    public static $mysqlHost = "localhost"; //put your server host here
+    public static $databaseName = "ji1"; //put your database name that you crated
+    public static $databaseUser = "root"; //put your database username that you created
+    public static $databasePassword = "";//put your database password that you crated
+```
+####And run http://yourDomain.test/install.php to import database

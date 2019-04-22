@@ -1,12 +1,17 @@
 <?php
-require_once('config.php');
+ini_set('display_errors',1); error_reporting(E_ALL);
+
+require_once ('vendor/autoload.php');
+
+use Controller\Config;
+use PDO;
+
 try{
-    //connect to database
-    $databaseConnection = new PDO("mysql:host=$mysqlHost;dbname=$databaseName",$databaseUser,$databasePassword);
-    $databaseConnection->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    $DB = new PDO('mysql:host=' . Config::$mysqlHost . ';dbname=' . Config::$databaseName, Config::$databaseUser, Config::$databasePassword);
+    $DB->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
     //ready query for execute
-    $sqlInstallQuery = $databaseConnection->prepare("
+    $sqlInstallQuery = $DB->prepare("
     CREATE TABLE `links` (
   `id` int(11) NOT NULL,
   `long` varchar(700) NOT NULL,
