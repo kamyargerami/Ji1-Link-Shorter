@@ -6,7 +6,7 @@ require_once ('vendor/autoload.php');
 use \NoahBuscher\Macaw\Macaw;
 
 Macaw::get('/', 'Controller\HomeController@homepage');
-Macaw::post('/shorter', 'Controller\LinkController@shortener');
+Macaw::post('/shorter', 'Controller\LinkController@shorter');
 Macaw::get('/redirect', 'Controller\LinkController@redirect');
 Macaw::get('/(:any)', function ($shortLink){
     header("Location: /redirect?shortLink=" . $shortLink);
