@@ -20,7 +20,7 @@
                             class="fa fa-twitter small"></i></a>
                 <a href="https://www.instagram.com/kam2yar/" class="waves-effect waves-light white-text"><i
                             class="fa fa-instagram small"></i></a>
-                <a href="https://github.com/kam2yar/ji1-shortener" class="waves-effect waves-light white-text"><i
+                <a href="https://github.com/kam2yar/ji1-shorter" class="waves-effect waves-light white-text"><i
                             class="fa fa-github small"></i></a>
             </div>
         </div>
