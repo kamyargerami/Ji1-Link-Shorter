@@ -89,7 +89,7 @@ class LinkController
             }
             if (!$flagFind) {
                 echo "لینک نا معتبر است ، پس از گذشت ۳ ثانیه به صفحه اصلی منتقل می شوید";
-                header('Refresh: 3;url=index.php');
+                header('Refresh: 3;url=/');
             }
         } catch (PDOException $e) {
             echo "Error: " . $e->getMessage();
