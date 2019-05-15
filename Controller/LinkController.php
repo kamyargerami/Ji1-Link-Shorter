@@ -18,12 +18,17 @@ class LinkController
         $longLink = htmlspecialchars($_POST['linkLong']);
         if ($this->isValidUrl($longLink)) {
             try {
-                $shortLink = $this->model->isLinkExist($longLink);
+                $shortLink = $this->isLinkExist($longLink);
                 $upperExpire = date('Y-m-d', strtotime("+20 days"));
 
                 if (!$shortLink) {
                     $shortLink = $this->random_string(Config::$randomCharNumber);
-                    $this->model->insert($longLink, $shortLink, $upperExpire);
+                    $this->model->insert([
+                        'long' => $longLink,
+                        'short' => $shortLink,
+                        'expire' => $upperExpire,
+                        'click' => 0
+                    ]);
                 }
 
                 echo Config::getUrl() . $shortLink;
@@ -42,7 +47,7 @@ class LinkController
     {
         $shortLink = htmlspecialchars($_GET['shortLink']);
         try {
-            $longLink = $this->model->fetchByShortLink($shortLink);
+            $longLink = $this->fetchByShortLink($shortLink);
             if ($longLink) {
                 $this->model->addClick($longLink['click'] + 1, $longLink['id']);
 
@@ -77,7 +82,7 @@ class LinkController
         }
 
         do {
-            $link = $this->model->fetchByShortLink($key);
+            $link = $this->fetchByShortLink($key);
 
             if (!$link) {
                 $flagWrite = true;
@@ -85,5 +90,25 @@ class LinkController
         } while ($flagWrite == false);
 
         return $key;
+    }
+
+    public function isLinkExist($long)
+    {
+        $row = $this->model->fetch(['long' => $long]);
+        if ($row) {
+            return $row[0]['short'];
+        } else {
+            return false;
+        }
+    }
+
+    public function fetchByShortLink($short)
+    {
+        $row = $this->model->fetch(['short' => $short]);
+        if ($row) {
+            return $row[0];
+        } else {
+            return false;
+        }
     }
 }

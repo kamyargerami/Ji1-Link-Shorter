@@ -6,30 +6,8 @@ namespace Model;
 
 class LinkModel extends Model
 {
-    public function insert($long,$short,$expire)
-    {
-        $query = $this->connection->prepare(
-            "INSERT INTO `links` (`id`, `long`, `short`, `expire`)
-                                VALUES (NULL, :longLink, :shortLink, :expireDate);");
+    public $table = 'links';
 
-        $query->bindParam(':longLink', $long);
-        $query->bindParam(':shortLink', $short);
-        $query->bindParam(':expireDate', $expire);
-        return $query->execute();
-    }
-
-    public function isLinkExist($long)
-    {
-        $query = $this->connection->prepare("SELECT * FROM `links` WHERE `long` LIKE :long");
-        $query->bindParam(':long', $long);
-        $query->execute();
-        $row = $query->fetchAll();
-        if ($row) {
-            return $row[0]['short'];
-        } else {
-            return false;
-        }
-    }
 
     public function deleteExpired()
     {
@@ -63,13 +41,13 @@ class LinkModel extends Model
         }
     }
 
-    public function addClick($linkId,$click)
+    public function addClick($linkId, $click)
     {
-        $sqlWriteClickQuery = $this->connection->prepare(
+        $query = $this->connection->prepare(
             "UPDATE `links` SET `click` = :click WHERE `links`.`id` = :id;");
 
-        $sqlWriteClickQuery->bindParam(':click', $click);
-        $sqlWriteClickQuery->bindParam(':id', $currentColid);
-        $sqlWriteClickQuery->execute();
+        $query->bindParam(':click', $click);
+        $query->bindParam(':id', $currentColid);
+        $query->execute();
     }
 }
