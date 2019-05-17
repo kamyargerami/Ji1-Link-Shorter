@@ -1,11 +1,11 @@
-##Ji1 Link Shorter Script in php
+## Ji1 Link Shorter Script in php
 
 Demo: https://ji1.ir
 
 ji1 is a simple object oriented script written in php that allows you to make shorter link 
 without losing your seo. with 301 redirect.
 
-###Install
+### Install
 
 you can deploy script in your server.
 this package uses Macaw package for routes.
@@ -14,12 +14,12 @@ first you need clone the project in your server and you must install required co
 ```PHP
     Composer install
 ```
-###Configure web server
-####Apache
+### Configure web server
+#### Apache
 if you use apache you don't need to do anything because apache's configuration
 has stored in .htaccess file.
 
-####Nginx
+#### Nginx
 
 if you use nginx you need to put this lines in your website configuration to redirects all routes into index.php file
 
@@ -39,7 +39,7 @@ if you use nginx you need to put this lines in your website configuration to red
 ```
 
 
-###Finish Installation
+### Finish Installation
 
 you need edit Config file that stored in Controller\Config and then you must change the variables to your database
 details.
@@ -51,6 +51,6 @@ details.
     public static $databaseUser = "root"; //put your database username that you created
     public static $databasePassword = "";//put your database password that you crated
 ```
-####And 
+#### And 
 
 run http://yourDomain.test/install.php to import database

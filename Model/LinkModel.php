@@ -28,26 +28,13 @@ class LinkModel extends Model
         $sqlChangeExpire->execute();
     }
 
-    public function fetchByShortLink($short)
-    {
-        $query = $this->connection->prepare("SELECT * FROM `links` WHERE `short` LIKE :short");
-        $query->bindParam(':short', $short);
-        $query->execute();
-        $row = $query->fetchAll();
-        if ($row) {
-            return $row[0];
-        } else {
-            return false;
-        }
-    }
-
     public function addClick($linkId, $click)
     {
         $query = $this->connection->prepare(
             "UPDATE `links` SET `click` = :click WHERE `links`.`id` = :id;");
 
         $query->bindParam(':click', $click);
-        $query->bindParam(':id', $currentColid);
+        $query->bindParam(':id', $linkId);
         $query->execute();
     }
 }

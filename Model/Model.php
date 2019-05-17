@@ -67,14 +67,4 @@ abstract class Model
         $query = $this->connection->prepare($sql);
         return $query->execute();
     }
-
-    public function delete()
-    {
-
-    }
-
-    public function update()
-    {
-
-    }
 }
