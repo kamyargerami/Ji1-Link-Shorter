@@ -51,7 +51,6 @@ class LinkController
             if ($longLink) {
                 $this->model->addClick($longLink['click'] + 1, $longLink['id']);
 
-                Header("HTTP/1.1 301 Moved Permanently");
                 Header("Location: " . $longLink['long']);
             } else {
                 echo "لینک نا معتبر است ، پس از گذشت ۳ ثانیه به صفحه اصلی منتقل می شوید";

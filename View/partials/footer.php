@@ -10,7 +10,7 @@
     </div>
     <div class="footer-copyright">
         <div class="container">
-            <a class="grey-text text-lighten-4 right" href="https://kamyargerami.ir">طراحی و اجرا کامیار گرامی</a>
+            <a class="grey-text text-lighten-4 right" href="https://kamyar.dev">طراحی و اجرا کامیار گرامی</a>
             <div class="left">
                 <a href="https://www.facebook.com/kamyar.geramiasl" class="waves-effect waves-light white-text"><i
                             class="fa fa-facebook small"></i></a>
