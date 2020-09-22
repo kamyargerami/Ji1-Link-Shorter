@@ -14,7 +14,7 @@
                     <div class="collapsible-header red  darken-3 white-text"><i class="fa fa-question"></i>چرا جی وان؟</div>
                     <div class="collapsible-body">
                         <p>امکان استفاده از لینک دلخواه را فراهم می آورد</p>
-                        <p>با انتقال صفحه با ریدایرکت ۳۰۱ باعث می شود رنک وبسایت شما حفظ شود</p>
+                        <p>با انتقال صفحه با ریدایرکت ۳۰۲ باعث می شود رنک وبسایت شما حفظ شود</p>
                     </div>
                 </li>
             </ul>
